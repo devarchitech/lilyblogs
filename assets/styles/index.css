@@ -1,0 +1,143 @@
+ /* Reset default styles */
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ /* Include the TTF font using @font-face */
+ @font-face {
+     font-family: 'AfacadFlux';
+     src: url("../fonts/AfacadFlux.ttf");
+     font-weight: normal;
+     font-style: normal;
+ }
+
+ body {
+    font-family: 'AfacadFlux', sans-serif;
+ }
+
+ .index-image {
+     width: 300px;
+     height: 300px;
+     transition : opacity .5s,
+     width .5s, height .5s;
+ }
+
+ .index-image:hover {
+    width: 310px;
+     height: 310px;
+    opacity: .7;
+ }
+
+ .article-title {
+     font-weight: bold;
+     font-size: 30px;
+     margin-top: 20px;
+     letter-spacing: 2px;
+ }
+
+ .article-desc {
+     font-size: 20px;
+     margin-top: 20px;
+
+ }
+
+ .article-link {
+     font-size: 22px;
+     font-weight: bold;
+     margin-top: 20px;
+     width: 130px;
+     height: 30px;
+     border: none;
+     background-color: white;
+     transition: box-shadow .15s;
+ }
+
+ .article-link:hover {
+    box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.15);
+ }
+
+ /* Navbar container */
+ nav {
+     background-color: #333;
+     width: 100%;
+     overflow: hidden;
+ }
+
+ /* Navbar list style */
+ ul {
+     list-style: none;
+     padding: 0;
+     margin: 0;
+     display: flex;
+     justify-content: center;
+ }
+
+ /* Navbar links */
+ ul li {
+     display: inline;
+ }
+
+ ul li a {
+     display: block;
+     padding: 14px 20px;
+     text-decoration: none;
+     color: white;
+     text-align: center;
+     font-size: 18px;
+ }
+
+ ul li a:hover {
+     background-color: #575757;
+ }
+
+ /* Active state for the link */
+ ul li a.active {
+     background-color: #4CAF50;
+ }
+
+ /* Responsive: Mobile first */
+ @media screen and (max-width: 768px) {
+     nav {
+         background-color: #333;
+     }
+
+     ul {
+         flex-direction: column;
+         align-items: center;
+         width: 100%;
+     }
+
+     ul li a {
+         padding: 12px 20px;
+         width: 100%;
+         text-align: left;
+     }
+
+     /* Burger icon for mobile */
+     .menu-toggle {
+         display: block;
+         background-color: #333;
+         color: white;
+         padding: 10px 15px;
+         border: none;
+         font-size: 24px;
+         cursor: pointer;
+     }
+
+     ul {
+         display: none;
+         /* Hide menu items by default */
+         width: 100%;
+     }
+
+     ul.active {
+         display: flex;
+     }
+ }
+
+ /* Show menu when burger icon is clicked */
+ .menu-toggle.open+ul {
+     display: flex !important;
+ }
