@@ -6,36 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lily's </title>
     <link rel="icon" href="./assets/images/lilybloom.png" type="image/png">
-    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/index_grid.css">
 </head>
 
 <body>
     <header>
-        <div class="header">
-            <div class="left-section">
-                <img height="50px" src="/assets/images/lilybloom_trans.png">
-                <input type="button" class="hamburger-menu" value="&#9776;">
-            </div>
-            <div class="middle-section">
-                <ul>
-                    <li><a href="#home" class="active">Home</a></li>
-                    <li><a href="#family">Family</a></li>
-                    <li><a href="#travel">Travel</a></li>
-                    <li><a href="#crafts">Crafts</a></li>
-                    <li><a href="#recipes">Recipes</a></li>
-                    <li><a href="#holidays">Holidays</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </div>
-            <div class="right-section">
-                Admin
-            </div>
-        </div>
+        <nav>
+            <!-- Mobile Menu Toggle -->
+            <button class="menu-toggle" onclick="toggleMenu()">&#9776;</button>
+
+            <!-- Navbar Links -->
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#family">Family</a></li>
+                <li><a href="#travel">Travel</a></li>
+                <li><a href="#crafts">Crafts</a></li>
+                <li><a href="#recipes">Recipes</a></li>
+                <li><a href="#holidays">Holidays</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
         <div style="text-align:center; margin:30px">
             <h1>Welcome to Lily Blogs</h1>
-
-            <h4 style="color:red;">This site is still under construction. Please revisit in few days to see updates.
-            </h4>
+            
+            <h4 style="color:red;">This site is still under construction. Please revisit in few days to see updates.</h4>
 
         </div>
     </header>
@@ -128,13 +122,14 @@
 
         </div>
     </main>
-    <footer class="footer">
+    <footer>
+        <br>
+        <br>
         <div style="text-align:center">
             &#169 2024 Lily Blogs. All rights reserved.
         </div>
-        <div>Designed and developed by VINItech LLC</div>
+        <script src="./assets/scripts/index.js"></script>
     </footer>
-    <script src="./assets/scripts/index.js"></script>
 </body>
 
 </html>
